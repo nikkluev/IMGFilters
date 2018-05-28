@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>920</width>
-    <height>504</height>
+    <width>342</width>
+    <height>457</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>IMGFilters</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QPushButton" name="exitButton">
     <property name="geometry">
      <rect>
-      <x>830</x>
-      <y>420</y>
+      <x>220</x>
+      <y>30</y>
       <width>80</width>
       <height>21</height>
      </rect>
@@ -30,8 +30,8 @@
    <widget class="QGroupBox" name="groupGaussBox">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>70</y>
+      <x>10</x>
+      <y>240</y>
       <width>151</width>
       <height>91</height>
      </rect>
@@ -48,7 +48,7 @@
     <widget class="QPushButton" name="gaussBlurButton">
      <property name="geometry">
       <rect>
-       <x>40</x>
+       <x>30</x>
        <y>60</y>
        <width>80</width>
        <height>21</height>
@@ -88,20 +88,20 @@
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>750</x>
-      <y>10</y>
+      <x>10</x>
+      <y>60</y>
       <width>151</width>
-      <height>61</height>
+      <height>161</height>
      </rect>
     </property>
     <property name="title">
      <string>Shades of gray</string>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButtonShGr">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>30</y>
+       <x>30</x>
+       <y>130</y>
        <width>80</width>
        <height>21</height>
       </rect>
@@ -110,12 +110,97 @@
       <string>Apply</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Coeffs</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>41</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>R</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>G</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>31</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>B</string>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxR">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>40</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="singleStep">
+      <double>0.010000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxG">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>70</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="doubleSpinBoxB">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>62</width>
+       <height>22</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QPushButton" name="pushOpenButton">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>30</y>
       <width>80</width>
       <height>21</height>
      </rect>
@@ -128,8 +213,8 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>380</y>
-      <width>281</width>
+      <y>340</y>
+      <width>201</width>
       <height>61</height>
      </rect>
     </property>
@@ -150,6 +235,9 @@
      </property>
     </widget>
     <widget class="QRadioButton" name="radioMThrButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -161,18 +249,102 @@
      <property name="text">
       <string>Multi thread</string>
      </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
     </widget>
-    <widget class="QRadioButton" name="radioGPUButton">
+   </widget>
+   <widget class="QPushButton" name="pushSaveButton">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>30</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Save</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>151</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Motion blur</string>
+    </property>
+    <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
-       <x>210</x>
+       <x>10</x>
        <y>30</y>
-       <width>51</width>
-       <height>16</height>
+       <width>47</width>
+       <height>13</height>
       </rect>
      </property>
      <property name="text">
-      <string>GPU</string>
+      <string>Radius</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinMBlurBox">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>30</y>
+       <width>43</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="minimum">
+      <number>-99</number>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Horizontal</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>84</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Vertical</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushMotionButton">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>130</y>
+       <width>80</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Apply</string>
      </property>
     </widget>
    </widget>
@@ -182,7 +354,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>920</width>
+     <width>342</width>
      <height>20</height>
     </rect>
    </property>

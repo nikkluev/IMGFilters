@@ -25,10 +25,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    filters.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    filters.h
 
 FORMS += \
         mainwindow.ui
+
+QMAKE_CXXFLAGS+= -fopenmp
+QMAKE_LFLAGS +=  -fopenmp
